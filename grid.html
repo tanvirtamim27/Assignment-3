@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "advertise main sidebar"
+        "advertise twin twin"
+        "footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto 200px 150px auto;
+      gap: 10px;
+      height: 100vh;
+      padding: 10px;
+      box-sizing: border-box;
+      background: #fff;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #42a5f5;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .advertise {
+      grid-area: advertise;
+      background-color: #ffca28;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .main-content {
+      grid-area: main;
+      background-color: #66bb6a;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #ab47bc;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .twin {
+      background-color: #ffa726;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .twin:first-of-type {
+      grid-area: twin;
+    }
+
+    .twin:last-of-type {
+      grid-area: twin;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #1976d2;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">.header</div>
+    <div class="advertise">.advertise</div>
+    <div class="main-content">.main-content</div>
+    <div class="sidebar">.sidebar</div>
+    <div class="twin">.twin</div>
+    <div class="twin">.twin</div>
+    <div class="footer">.footer</div>
+  </div>
+
+</body>
+</html>
